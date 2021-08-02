@@ -1,0 +1,136 @@
+//Login Screen
+"Welcome Back!" = "お帰りなさい";
+"Login to continue" = "ログインして続行";
+"Username" = "ユーザー名";
+"Password" = "パスワード";
+"Forgot Password" = "パスワードを忘れた";
+"LOGIN" = "ログイン";
+"Or login via" = "もしくは他を経由してログイン";
+"Facebook" = "Facebook";
+"Still don't have an account? Register Now!" = "まだアカウントを持っていない 今すぐ登録する";
+"Register Now!" = "今すぐ登録する";
+
+//Signup Screen
+"Create an account" = "アカウント作成";
+"Add your photo" = "写真を追加する";
+"Full name" = "フルネーム";
+"Email" = "Eメール";
+"Create your Account" = "アカウント作成";
+"Or signup via" = "もしくはサインアップして続行";
+"Have an account? Login" = "アカウントをお持ちですか？ ログインする";
+"Login" = "ログインする";
+
+//Match Result Screen
+"Match Result" = "マッチング結果";
+"Messages" = "メッセージ";
+"Message" = "メッセージ";
+"Oops! Looks like you have not found any Match yet." = "まだマッチする人が見つからないようです";
+
+//Match Finding Screen
+"DISCOVERY" = "探す";
+"Hey" = "こんにちは";
+"Searching..." = "検索中...";
+"Meet people around you" = "あなたの周りにいる人々を確認する";
+"No Users Found" = "利用者が見つかりません 😓";
+"Search" = "検索";
+
+//Edit Profile Screen
+"EDIT PROFILE" = "プロフィール編集";
+"Save" = "保存";
+"Your Information" = "プロフィール";
+"Your Name" = "名前";
+"Age" = "年齢";
+"Gender" = "性別";
+"Male" = "男性";
+"Female" = "女性";
+"Others" = "その他";
+"Location" = "居住地";
+"Height" = "身長";
+"Current Relationship" = "恋愛・結婚について";
+"Married" = "既婚";
+"Divorce" = "離婚";
+"Single" = "独身、もしくはフリー";
+"Do you have kids?" = "子供はいますか？";
+"Yes" = "はい";
+"No" = "いいえ";
+"What relationship are you looking for?" = "どんな相手をお探しですか？";
+"Casual relationship" = "カジュアルな恋愛ができる人";
+"Serious relationship" = "真剣な恋愛ができる人";
+"Just friends" = "ただの友達";
+"Whatever I can get" = "どんな方でも";
+"What is your job?" = "あなたの仕事はなんですか？";
+"What is your religion?" = "あなたの宗教は？";
+"Christianity" = "キリスト教";
+"Islam" = "イスラム教";
+"Hinduism" = "ヒンズー教";
+"Buddhism" = "仏教";
+"Judaism" = "ユダヤ教";
+"Other religions" = "その他宗教";
+"None believer" = "無し";
+"Your Images" = "あなたの写真";
+
+//Filters Screen
+"FILTERS" = "フィルター";
+"Interested in" = "興味があるのは・・・";
+"Age Limit" = "年齢制限";
+"Both" = "どちらも";
+"Location Limit" = "ロケーション制限";
+"Current Relationship" = "現在の関係";
+"Kids" = "子供";
+"Someone looking for" = "探している人";
+"Religion" = "宗教";
+
+//Chat Request Send Confirm
+"Are you sure you want to send him a request to chat?" = "彼にチャットリクエストを送信したいですか？";
+"Are you sure you want to send her a request to chat?" = "彼女にチャットリクエストを送信したいですか？";
+"Are you sure you want to send this person a request to chat?" = "この人にチャットリクエストを送信したいですか？";
+" wants to chat with you." = "あなたとチャットしたい人がいます";
+"Accept" = "承認する";
+"Decline" = "拒否する";
+
+//Others
+"Error" = "エラー";
+"OK" = "OK";
+"PROFILE" = "プロフィール";
+"PHOTO" = "写真";
+"About Me" = "私について";
+
+"A user" = "ユーザー";
+"sent you chat request." = "チャットリクエストを送信しました";
+"accepted your chat request." = "あなたのリクエストを承認しました";
+"declined your chat request." = "あなたのチャットリクエストを拒否しました";
+"username/email is required." = "ユーザー名/メールアドレスが必要です";
+"Oops! Text is empty" = "空欄になっています";
+"Username should be more than 3" = "ユーザー名は３文字以上必要です";
+"Password should be more than 5" = "パスワードは５文字以上必要です";
+"Gender should be selected" = "性別を選択してください";
+"New Message" = "新しいメッセージ";
+"Pick Location" = "場所を選択してください";
+"Cancel" = "キャンセル";
+"Invalid Name" = "名前が無効です";
+"Please enter your name." = "名前を入力してください";
+"Invalid Age" = "無効な年齢";
+"Please enter your age." = "年齢を入力してください";
+"Choose one" = "１つ選択してください";
+"Unmatch and Block" = "不一致とブロック";
+"View Profile" = "プロフィールを見る";
+"She Said Yes!" = "彼女ははい！と言いました";
+"He Said Yes!" = "彼ははい！と言いました";
+"away" = "離れている";
+"Chat" = "チャット";
+"Chat Later" = "後でチャットする";
+"Chat Now" = "今チャットする";
+"Settings" = "設定";
+"Log Out" = "ログアウト";
+"Terms & Conditions" = "利用規約";
+"Choose" = "選択する";
+"Report" = "レポート";
+"All" = "全て";
+
+"Name" = "名前";
+"Distance" = "距離";
+"Desired Relationship" = "恋愛に求めているもの";
+"Job" = "仕事";
+
+"I don't care" = "気にしません";
+"Any" = "誰でも";

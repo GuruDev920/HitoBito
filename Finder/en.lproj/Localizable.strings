@@ -1,0 +1,136 @@
+//Login Screen
+"Welcome Back!" = "Welcome Back!";
+"Login to continue" = "Login to continue";
+"Username" = "Username";
+"Password" = "Password";
+"Forgot Password" = "Forgot Password";
+"LOGIN" = "LOGIN";
+"Or login via" = "Or login via";
+"Facebook" = "Facebook";
+"Still don't have an account? Register Now!" = "Still don't have an account? Register Now!";
+"Register Now!" = "Register Now!";
+
+//Signup Screen
+"Create an account" = "Create an account";
+"Add your photo" = "Add your photo";
+"Full name" = "Full name";
+"Email" = "Email";
+"Create your Account" = "Create your Account";
+"Or signup via" = "Or signup via";
+"Have an account? Login" = "Have an account? Login";
+"Login" = "Login";
+
+//Match Result Screen
+"Match Result" = "Match Result";
+"Messages" = "Messages";
+"Message" = "Message";
+"Oops! Looks like you have not found any Match yet." = "Oops! Looks like you have not found any Match yet.";
+
+//Match Finding Screen
+"DISCOVERY" = "DISCOVERY";
+"Hey" = "Hey";
+"Searching..." = "Searching...";
+"Meet people around you" = "Meet people around you";
+"No Users Found" = "No users Found 😓";
+"Search" = "Search";
+
+//Edit Profile Screen
+"EDIT PROFILE" = "EDIT PROFILE";
+"Save" = "Save";
+"Your Information" = "Your Information";
+"Your Name" = "Your Name";
+"Age" = "Age";
+"Gender" = "Gender";
+"Male" = "Male";
+"Female" = "Female";
+"Others" = "Others";
+"Location" = "Location";
+"Height" = "Height";
+"Current Relationship" = "Current Relationship";
+"Married" = "Married";
+"Divorce" = "Divorce";
+"Single" = "Single";
+"Do you have kids?" = "Do you have kids?";
+"Yes" = "Yes";
+"No" = "No";
+"What relationship are you looking for?" = "What relationship are you looking for?";
+"Casual relationship" = "Casual relationship";
+"Serious relationship" = "Serious relationship";
+"Just friends" = "Just friends";
+"Whatever I can get" = "Whatever I can get";
+"What is your job?" = "What is your job?";
+"What is your religion?" = "What is your religion?";
+"Christianity" = "Christianity";
+"Islam" = "Islam";
+"Hinduism" = "Hinduism";
+"Buddhism" = "Buddhism";
+"Judaism" = "Judaism";
+"Other religions" = "Other religions";
+"None believer" = "None believer";
+"Your Images" = "Your Images";
+
+//Filters Screen
+"FILTERS" = "FILTERS";
+"Interested in" = "Interested in";
+"Age Limit" = "Age Limit";
+"Both" = "Both";
+"Location Limit" = "Location Limit";
+"Current Relationship" = "Current Relationship";
+"Kids" = "Kids";
+"Someone looking for" = "Someone looking for";
+"Religion" = "Religion";
+
+//Chat Request Send Confirm
+"Are you sure you want to send him a request to chat?" = "Are you sure you want to send him a request to chat?";
+"Are you sure you want to send her a request to chat?" = "Are you sure you want to send her a request to chat?";
+"Are you sure you want to send this person a request to chat?" = "Are you sure you want to send this person a request to chat?";
+" wants to chat with you." = " wants to chat with you.";
+"Accept" = "Accept";
+"Decline" = "Decline";
+
+//Others
+"Error" = "Error";
+"OK" = "OK";
+"PROFILE" = "PROFILE";
+"PHOTO" = "PHOTO";
+"About Me" = "About Me";
+
+"A user" = "A user";
+"sent you chat request." = "sent you chat request.";
+"accepted your chat request." = "accepted your chat request.";
+"declined your chat request." = "declined your chat request.";
+"username/email is required." = "username/email is required.";
+"Oops! Text is empty" = "Oops! Text is empty";
+"Username should be more than 3" = "Username should be more than 3";
+"Password should be more than 5" = "Password should be more than 5";
+"Gender should be selected" = "Gender should be selected";
+"New Message" = "New Message";
+"Pick Location" = "Pick Location";
+"Cancel" = "Cancel";
+"Invalid Name" = "Invalid Name";
+"Please enter your name." = "Please enter your name.";
+"Invalid Age" = "Invalid Age";
+"Please enter your age." = "Please enter your age.";
+"Choose one" = "Choose one";
+"Unmatch and Block" = "Unmatch and Block";
+"View Profile" = "View Profile";
+"She Said Yes!" = "She Said Yes!";
+"He Said Yes!" = "He Said Yes!";
+"away" = "away";
+"Chat" = "Chat";
+"Chat Later" = "Chat Later";
+"Chat Now" = "Chat Now";
+"Settings" = "Settings";
+"Log Out" = "Log Out";
+"Terms & Conditions" = "Terms & Conditions";
+"Choose" = "Choose";
+"Report" = "Report";
+"All" = "All";
+
+"Name" = "Name";
+"Distance" = "Distance";
+"Desired Relationship" = "Desired Relationship";
+"Job" = "Job";
+
+"I don't care" = "I don't care";
+"Any" = "Any";

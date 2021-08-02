@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>422444803208-h4lq3v5jlmpkdp8pgkm2mhr622lqmcfu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.422444803208-h4lq3v5jlmpkdp8pgkm2mhr622lqmcfu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyADsLe8gTAxMvdCihKj9mL0wMkrdsvHVmI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>422444803208</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.chawal.findrr</string>
+	<key>PROJECT_ID</key>
+	<string>hito-bito-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hito-bito-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:422444803208:ios:94c4968bc9892d8bffeb3d</string>
+	<key>DATABASE_URL</key>
+	<string>https://hito-bito-app.firebaseio.com</string>
+</dict>
+</plist>
