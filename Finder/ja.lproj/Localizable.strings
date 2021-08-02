@@ -19,6 +19,12 @@
 "Or signup via" = "もしくはサインアップして続行";
 "Have an account? Login" = "アカウントをお持ちですか？ ログインする";
 "Login" = "ログインする";
+"Take a photo" = "写真を撮る";
+"Photo Library" = "フォトライブラリ";
+"Cancel" = "キャンセル";
+"TermsAgree1" = "利用規約及び個人情報保護方針に";
+"TermsAgree2" = "同意する";
+"Do you agree to the Terms of Use and Privacy Policy?" = "利用規約とプライバシーポリシーに同意しますか？";
 
 //Match Result Screen
 "Match Result" = "マッチング結果";
@@ -46,7 +52,7 @@
 "Others" = "その他";
 "Location" = "居住地";
 "Height" = "身長";
-"Current Relationship" = "恋愛・結婚について";
+"Current Relationship" = "現在の関係は";
 "Married" = "既婚";
 "Divorce" = "離婚";
 "Single" = "独身、もしくはフリー";
@@ -58,7 +64,7 @@
 "Serious relationship" = "真剣な恋愛ができる人";
 "Just friends" = "ただの友達";
 "Whatever I can get" = "どんな方でも";
-"What is your job?" = "あなたの仕事はなんですか？";
+"What is your job?" = "仕事は何をしていますか？";
 "What is your religion?" = "あなたの宗教は？";
 "Christianity" = "キリスト教";
 "Islam" = "イスラム教";
@@ -75,7 +81,6 @@
 "Age Limit" = "年齢制限";
 "Both" = "どちらも";
 "Location Limit" = "ロケーション制限";
-"Current Relationship" = "現在の関係";
 "Kids" = "子供";
 "Someone looking for" = "探している人";
 "Religion" = "宗教";
@@ -122,7 +127,7 @@
 "Chat Now" = "今チャットする";
 "Settings" = "設定";
 "Log Out" = "ログアウト";
-"Terms & Conditions" = "利用規約";
+"Terms & Conditions" = "プライバシーポリシー";
 "Choose" = "選択する";
 "Report" = "レポート";
 "All" = "全て";
@@ -133,4 +138,28 @@
 "Job" = "仕事";
 
 "I don't care" = "気にしません";
-"Any" = "誰でも";
+"Any" = "どちらでも";
+"New Request!" = "新しいリクエスト!";
+"Now" = "今";
+"Please wait until user accepts your request" = "ユーザーがリクエストを受け入れるまでお待ちください";
+" min ago" = "分前";
+" minute ago" = "分前";
+" hrs ago" = "時間前";
+" hr ago" = "時間前";
+
+"Reset Password" = "パスワードの再設定";
+"Please enter the email your account was setup with" = "アカウントが設定されたメールアドレスを入力してください";
+"Request" = "リクエスト";
+"Password reset email sent" = "リセットされたパスワードがメールに送信されました";
+"An email was sent to your email address, Please check your email to reset your password." = "メールアドレスにメールが送信されました,メールを確認してパスワードをリセットしてください。";
+"The operations is not allowed." = "操作は許可されていません。";
+"You have been disabled by Administrator." = "管理者によって無効にされました。";
+"Sign in error" = "サインインのエラー";
+"Your password is incorrect. Please try with correct password." = "パスワードが間違っています,正しいパスワードでお試しください";
+"Your email address is malformed." = "メールアドレスが間違っています。";
+"You didn't verify your email yet. Please check your email." = "まだメールを確認していません,メールを確認して下さい。";
+"Your email address is already in use." = "メールアドレスは既に使用されています";
+"Your password is weak. Please try with strong password." = "パスワードが弱いです,強力なパスワードで試して下さい。";
+"You are failed to create user on Database." = "データベースにユーザーを作成できませんでした。";
+"Request sent" = "リクエストが送信されました";
+"Please upload your photos." = "写真を更新して下さい";

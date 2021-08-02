@@ -31,6 +31,7 @@ class UserData {
     var picsChanged     : [String: Bool] = [:]
     var picImages       : [String: UIImage] = [:]
     var fbtoken         : String?
+    var emailVerified   = false
 
     init(user: NSDictionary?) {
         
@@ -63,5 +64,6 @@ class UserData {
         self.dpLarge        = user.object(forKey: u_dpLarge) as? String
         self.dpSmall        = user.object(forKey: u_dpSmall) as? String
         self.fbtoken        = user.object(forKey: u_token) as? String
+        self.emailVerified  = user.object(forKey: u_emailVerified) as? Bool ?? false
     }
 }

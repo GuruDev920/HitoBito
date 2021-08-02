@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
     private var dropDownDesiredRelation : DropDown!
     private var dropDownReligion        : DropDown!
 
-    private var curRelations        = ["Any", "Single"]
+    private var curRelations        = [NSLocalizedString("Any", comment: ""), NSLocalizedString("Single", comment: "")]
     private var desiredRelations    = DESIRED_RELATIONSHIPS
     private var religions           = [L_IDONOTCARE] + RELIGIONS
     
@@ -62,7 +62,7 @@ class SettingsViewController: UIViewController {
         sliderHeight.selectedMaxValue = CGFloat(self.userFilterData.filterHeightMax)
 
         self.setCurRelation(curRelation: self.userFilterData.filterCurRelation)
-        dropDownCurRelation.selectRow(self.userFilterData.filterCurRelation + 1, scrollPosition: .bottom)
+        dropDownCurRelation.selectRow(self.userFilterData.filterCurRelation, scrollPosition: .bottom)
 
         self.setDesiredRelation(desiredRelation: self.userFilterData.filterDesiredRelation)
         dropDownDesiredRelation.selectRow(self.userFilterData.filterDesiredRelation, scrollPosition: .bottom)
@@ -74,13 +74,8 @@ class SettingsViewController: UIViewController {
     }
     
     private func setCurRelation(curRelation: Int) {
-        if curRelation == -1 {
-            self.userFilterData.filterCurRelation = 0
-            btnCurRelation.setTitle(self.curRelations[0], for: .normal)
-        } else {
-            self.userFilterData.filterCurRelation = curRelation
-            btnCurRelation.setTitle(self.curRelations[curRelation], for: .normal)
-        }
+        self.userFilterData.filterCurRelation = curRelation
+        btnCurRelation.setTitle(self.curRelations[curRelation], for: .normal)
     }
     
     private func setDesiredRelation(desiredRelation: Int) {

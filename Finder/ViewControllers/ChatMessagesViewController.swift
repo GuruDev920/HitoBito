@@ -134,6 +134,9 @@ class ChatMessagesViewController: JSQMessagesViewController, UIActionSheetDelega
     }
     
     private func setObserverChat() {
+        self.messages.removeAll()
+        self.collectionView.reloadData()
+        
         if observerHandleChat == nil {
             let ref = Database.database().reference()
             observerHandleChat = ref.child("chats/\(self.chat.id)").queryLimited(toLast: UInt(MAX_NUMBER_OF_MESSAGES)).observe(.childAdded, with: { snapshot in
@@ -148,8 +151,6 @@ class ChatMessagesViewController: JSQMessagesViewController, UIActionSheetDelega
                     }
                     
                     self.addMessage(message: msg)
-                    
-                    //self.chat.messages.append(msg)
                     
                     self.finishReceivingMessage(animated: true)
                 }
@@ -289,8 +290,6 @@ class ChatMessagesViewController: JSQMessagesViewController, UIActionSheetDelega
         }
 
         let chatMessage = ChatMessage(id: messageId, senderId: (currentuser?.object(forKey: "userId") as! String), receiverId: self.incomingUser.object(forKey: "userId") as! String, message: text)
-//        self.addMessage(message: chatMessage)
-//        self.collectionView.reloadData()
         
         if let pic = pic {
             
@@ -309,10 +308,6 @@ class ChatMessagesViewController: JSQMessagesViewController, UIActionSheetDelega
                             
                             PushNotificationManager.shared.sendMessage(user: self.incomingUser!, message: pushText)
                             self.room.setValue(Int64(Date().timeIntervalSince1970), forKey: "lastUpdate") // ["lastUpdate"] = NSDate()
-//                            self.room.saveInBackground(block: nil)
-//                            MatchManager.shared.saveMatchInBackground(match: self.room as! NSMutableDictionary) { (result) in
-//
-//                            }
                         }
                     })
                 }
@@ -326,10 +321,22 @@ class ChatMessagesViewController: JSQMessagesViewController, UIActionSheetDelega
                 
                 PushNotificationManager.shared.sendMessage(user: self.incomingUser!, message: pushText)
                 self.room.setValue(Int64(Date().timeIntervalSince1970), forKey: "lastUpdate") // ["lastUpdate"] = NSDate()
-//                self.room.saveInBackground(block: nil)
-//                MatchManager.shared.saveMatchInBackground(match: self.room as! NSMutableDictionary) { (result) in
-//                    
-//                }
+            }
+        }
+        
+        // update room with time
+        let temp = room.object(forKey: "objectId") as! String
+        var ref: DatabaseReference!
+        
+        room.setValue(Int64(Date().timeIntervalSince1970), forKey: "updatedAt")
+          
+        ref = Database.database().reference()
+        ref.child("Matches").child(temp).setValue(room as NSDictionary) {
+            (error:Error?, ref:DatabaseReference) in
+            if let error = error {
+              print("Data could not be saved: \(error).")
+            } else {
+                print("Data saved successfully.")
             }
         }
     }

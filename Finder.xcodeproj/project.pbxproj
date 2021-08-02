@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05EB3B1326AA6F3900CDDBE4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB3B1226AA6F3900CDDBE4 /* ImagePicker.swift */; };
 		0809D02B249A6BFF004FBBB7 /* UILocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809D02A249A6BFF004FBBB7 /* UILocalizedButton.swift */; };
 		080B111D24993AFE00C75200 /* ChatRequestAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B111C24993AFE00C75200 /* ChatRequestAcceptViewController.swift */; };
 		081608252492CC80009D491C /* Bitter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081608222492CC7F009D491C /* Bitter-Bold.ttf */; };
@@ -75,11 +76,11 @@
 		10AF8658248705A600C298D9 /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AF8650248705A600C298D9 /* JTSSimpleImageDownloader.m */; };
 		10AF8659248705A600C298D9 /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AF8652248705A600C298D9 /* UIApplication+JTSImageViewController.m */; };
 		10AF865A248705A600C298D9 /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AF8654248705A600C298D9 /* UIImage+JTSImageEffects.m */; };
+		215673CD2668CE2E0004AED3 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215673CC2668CE2E0004AED3 /* NewRequestViewController.swift */; };
 		21C576A22664212200DF1189 /* AsyncPhotoMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C576A12664212200DF1189 /* AsyncPhotoMediaItem.swift */; };
 		21E164B926624A7D002AE8AE /* JSQAudioMediaViewAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E164B526624A7B002AE8AE /* JSQAudioMediaViewAttributes.m */; };
 		21E164BA26624A7D002AE8AE /* JSQMessagesBubblesSizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E164B826624A7C002AE8AE /* JSQMessagesBubblesSizeCalculator.m */; };
 		21E164BE26624A91002AE8AE /* JSQAudioMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E164BC26624A90002AE8AE /* JSQAudioMediaItem.m */; };
-		2290CB4E2667724600A56145 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290CB4D2667724600A56145 /* AlertBuilder.swift */; };
 		2E27B3DE1AD95B3400C83972 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E27B3DB1AD95B3400C83972 /* Bolts.framework */; };
 		2E27B3DF1AD95B3400C83972 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E27B3DC1AD95B3400C83972 /* FacebookSDK.framework */; };
 		2E3DD6231AA058C10077B6DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3DD6221AA058C10077B6DA /* AppDelegate.swift */; };
@@ -188,6 +189,7 @@
 		035218D71B7BE2CB00E389AD /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		035218D91B7BE2EC00E389AD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		0376296B452723E0B97C9F2B /* Pods_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EB3B1226AA6F3900CDDBE4 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0809D02A249A6BFF004FBBB7 /* UILocalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizedButton.swift; sourceTree = "<group>"; };
 		080B111C24993AFE00C75200 /* ChatRequestAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestAcceptViewController.swift; sourceTree = "<group>"; };
 		081608222492CC7F009D491C /* Bitter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitter-Bold.ttf"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		10AF8654248705A600C298D9 /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
 		10AF865B24872C5E00C298D9 /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		21010E3E265F5E80006114D1 /* NagoyaLoc.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NagoyaLoc.gpx; sourceTree = "<group>"; };
+		215673CC2668CE2E0004AED3 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		21C576A12664212200DF1189 /* AsyncPhotoMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPhotoMediaItem.swift; sourceTree = "<group>"; };
 		21E164B426624A7B002AE8AE /* JSQMessagesBubblesSizeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQMessagesBubblesSizeCalculator.h; sourceTree = "<group>"; };
 		21E164B526624A7B002AE8AE /* JSQAudioMediaViewAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQAudioMediaViewAttributes.m; sourceTree = "<group>"; };
@@ -276,7 +279,6 @@
 		21E164B826624A7C002AE8AE /* JSQMessagesBubblesSizeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesBubblesSizeCalculator.m; sourceTree = "<group>"; };
 		21E164BC26624A90002AE8AE /* JSQAudioMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQAudioMediaItem.m; sourceTree = "<group>"; };
 		21E164BD26624A90002AE8AE /* JSQAudioMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQAudioMediaItem.h; sourceTree = "<group>"; };
-		2290CB4D2667724600A56145 /* AlertBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		2E27B3DB1AD95B3400C83972 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2E27B3DC1AD95B3400C83972 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		2E27B3E11AD95F3D00C83972 /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
@@ -471,7 +473,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08800C842493CE29009F9BFB /* Models */ = {
+		05EB3B1526AA6F3F00CDDBE4 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				05EB3B1226AA6F3900CDDBE4 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		08800C842493CE29009F9BFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				08800C852493CE35009F9BFB /* UserData.swift */,
@@ -479,14 +489,12 @@
 				08B3A63C249C516600CBE219 /* Chat.swift */,
 				08B3A63E249C53F200CBE219 /* ChatMessage.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		08EE4F4F249F4C18009F5D41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2E3DD6291AA058C10077B6DA /* Images.xcassets */,
-				1085DB0E2480FC3C00B7AF19 /* Fonts */,
 				08EE4F50249F4C27009F5D41 /* Audio */,
 			);
 			path = Resources;
@@ -510,17 +518,6 @@
 				AF5B165C24AD7C94008776A0 /* UserManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		08F527E4248E43050082F2E1 /* CustomizedView */ = {
-			isa = PBXGroup;
-			children = (
-				08F527E5248E43130082F2E1 /* VisualEffectView.swift */,
-				086F312C2498684A00AFC45D /* UILocalizedLabel.swift */,
-				0809D02A249A6BFF004FBBB7 /* UILocalizedButton.swift */,
-				086F312F24986B3300AFC45D /* DLLocalizedRadioButton.swift */,
-			);
-			path = CustomizedView;
 			sourceTree = "<group>";
 		};
 		1085DB0E2480FC3C00B7AF19 /* Fonts */ = {
@@ -631,37 +628,52 @@
 			path = JTSImageViewController;
 			sourceTree = "<group>";
 		};
-		223C5AAA26674569005F26CB /* Helpers */ = {
+		21687F302670582300FE4C66 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2290CB4D2667724600A56145 /* AlertBuilder.swift */,
-				2E9285AA1AA5AF2F00AF543E /* Config.swift */,
-				08A54D6D249D61EE0061D3B9 /* Utilities.swift */,
-				2E4C21F91AA1AE390041F4F8 /* Constants-Variables.swift */,
+				2E9608AA1AA3AE7400F4CC50 /* ChatMessagesViewController.swift */,
+				2E3DD6681AA063260077B6DA /* LoginViewController.swift */,
+				2E3DD66A1AA063380077B6DA /* RegisterViewController.swift */,
+				2E9285B21AA612F300AF543E /* TermsViewController.swift */,
+				100604E1247F35FB0000312E /* SettingsViewController.swift */,
+				1085DBFF2485CADB00B7AF19 /* OtherProfileViewController.swift */,
+				08F527E2248E41F80082F2E1 /* ChatRequestConfirmViewController.swift */,
+				080B111C24993AFE00C75200 /* ChatRequestAcceptViewController.swift */,
+				08AD378D2497AD4C009CDA46 /* ProfileMoreDetailsViewController.swift */,
+				0843523E249AAF4100DC5AA1 /* ProfileImagesViewController.swift */,
+				215673CC2668CE2E0004AED3 /* NewRequestViewController.swift */,
+				2E3DD6781AA07A7B0077B6DA /* MainViewController.swift */,
+				101D5024247DC31B0057D0A2 /* SideMenuViewController.swift */,
+				101D5026247E47FE0057D0A2 /* EditProfileViewController.swift */,
+				2E4C222F1AA26C440041F4F8 /* MatchFoundViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		21687F32267058C200FE4C66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E3DD6651AA05DCB0077B6DA /* Chat */,
+				87BA2B132476F5490077981D /* Cells */,
+				2E3DD6631AA05DB40077B6DA /* Find Match */,
+				08F527E5248E43130082F2E1 /* VisualEffectView.swift */,
+				086F312C2498684A00AFC45D /* UILocalizedLabel.swift */,
+				0809D02A249A6BFF004FBBB7 /* UILocalizedButton.swift */,
+				086F312F24986B3300AFC45D /* DLLocalizedRadioButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21687F332670591200FE4C66 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
 				08F3668B248DFDE90057FD68 /* Manager */,
+				2E4C21F91AA1AE390041F4F8 /* Constants-Variables.swift */,
+				2E9285AA1AA5AF2F00AF543E /* Config.swift */,
+				2E4C21F71AA1AE240041F4F8 /* ImageFunc.swift */,
+				08A54D6D249D61EE0061D3B9 /* Utilities.swift */,
 			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		22893803266740E2006F6535 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2E3DD6621AA05DA20077B6DA /* Tabs */,
-				2E9285B11AA612DE00AF543E /* TermsView */,
-				2E9AC33F1AA4DD8E00B32980 /* MatchSetting */,
-				2E9AC3341AA45F6400B32980 /* ViewProfile */,
-				2E3DD6671AA062DF0077B6DA /* Authentication */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		2289380626674169006F6535 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				2E3DD6261AA058C10077B6DA /* Main.storyboard */,
-				2E3DD62B1AA058C10077B6DA /* LaunchScreen.xib */,
-			);
-			path = Storyboards;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		2E3DD6141AA058C10077B6DA = {
@@ -687,15 +699,21 @@
 		2E3DD61F1AA058C10077B6DA /* Finder */ = {
 			isa = PBXGroup;
 			children = (
-				10AF865B24872C5E00C298D9 /* Finder.entitlements */,
-				08800C842493CE29009F9BFB /* Models */,
-				2E9AC3331AA45F5800B32980 /* Views */,
-				22893803266740E2006F6535 /* Controllers */,
-				2289380626674169006F6535 /* Storyboards */,
-				223C5AAA26674569005F26CB /* Helpers */,
+				21687F332670591200FE4C66 /* Utils */,
+				21687F32267058C200FE4C66 /* Views */,
+				21687F302670582300FE4C66 /* ViewControllers */,
 				08EE4F4F249F4C18009F5D41 /* Resources */,
-				2E3DD6201AA058C10077B6DA /* Supporting Files */,
+				08800C842493CE29009F9BFB /* Model */,
+				08ADC576248FE2380064EF17 /* GoogleService-Info.plist */,
 				2E3DD6221AA058C10077B6DA /* AppDelegate.swift */,
+				10AF865B24872C5E00C298D9 /* Finder.entitlements */,
+				2E3DD6261AA058C10077B6DA /* Main.storyboard */,
+				086F312A2498622000AFC45D /* Localizable.strings */,
+				2E3DD6291AA058C10077B6DA /* Images.xcassets */,
+				1085DB0E2480FC3C00B7AF19 /* Fonts */,
+				2E3DD62B1AA058C10077B6DA /* LaunchScreen.xib */,
+				2E3DD6201AA058C10077B6DA /* Supporting Files */,
+				2E3DD65F1AA05A2C0077B6DA /* Finder-Bridging-Header.h */,
 			);
 			path = Finder;
 			sourceTree = "<group>";
@@ -703,11 +721,8 @@
 		2E3DD6201AA058C10077B6DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				08ADC576248FE2380064EF17 /* GoogleService-Info.plist */,
 				2E27B3E11AD95F3D00C83972 /* notification.caf */,
 				2E3DD6211AA058C10077B6DA /* Info.plist */,
-				2E3DD65F1AA05A2C0077B6DA /* Finder-Bridging-Header.h */,
-				086F312A2498622000AFC45D /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -735,18 +750,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2E3DD6621AA05DA20077B6DA /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				2E3DD6781AA07A7B0077B6DA /* MainViewController.swift */,
-				101D5024247DC31B0057D0A2 /* SideMenuViewController.swift */,
-				2E3DD6651AA05DCB0077B6DA /* Chat */,
-				2E3DD6641AA05DBB0077B6DA /* My Profile */,
-				2E3DD6631AA05DB40077B6DA /* Find Match */,
-			);
-			name = Tabs;
-			sourceTree = "<group>";
-		};
 		2E3DD6631AA05DB40077B6DA /* Find Match */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,39 +759,23 @@
 				2E4C222E1AA26C0C0041F4F8 /* MatchFoundView */,
 			);
 			name = "Find Match";
-			sourceTree = "<group>";
-		};
-		2E3DD6641AA05DBB0077B6DA /* My Profile */ = {
-			isa = PBXGroup;
-			children = (
-				87BA2B132476F5490077981D /* Cells */,
-			);
-			name = "My Profile";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2E3DD6651AA05DCB0077B6DA /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				101D5026247E47FE0057D0A2 /* EditProfileViewController.swift */,
-				2E9608AA1AA3AE7400F4CC50 /* ChatMessagesViewController.swift */,
 				2E9608AC1AA3AEDB00F4CC50 /* ChatViewCell.swift */,
 				21C576A12664212200DF1189 /* AsyncPhotoMediaItem.swift */,
 			);
 			name = Chat;
-			sourceTree = "<group>";
-		};
-		2E3DD6671AA062DF0077B6DA /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				2E3DD6681AA063260077B6DA /* LoginViewController.swift */,
-				2E3DD66A1AA063380077B6DA /* RegisterViewController.swift */,
-			);
-			name = Authentication;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2E4C21FB1AA1AE470041F4F8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				05EB3B1526AA6F3F00CDDBE4 /* ImagePicker */,
 				10AF8648248705A600C298D9 /* JTSImageViewController */,
 				1085DBDF2481D92300B7AF19 /* LocationPicker */,
 				87EA5A61247793B40094DC6A /* SwiftyShadow */,
@@ -895,17 +882,8 @@
 		2E4C222E1AA26C0C0041F4F8 /* MatchFoundView */ = {
 			isa = PBXGroup;
 			children = (
-				2E4C222F1AA26C440041F4F8 /* MatchFoundViewController.swift */,
 			);
 			name = MatchFoundView;
-			sourceTree = "<group>";
-		};
-		2E9285B11AA612DE00AF543E /* TermsView */ = {
-			isa = PBXGroup;
-			children = (
-				2E9285B21AA612F300AF543E /* TermsViewController.swift */,
-			);
-			name = TermsView;
 			sourceTree = "<group>";
 		};
 		2E96080B1AA3AD2A00F4CC50 /* JSQMessagesViewController */ = {
@@ -1064,27 +1042,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		2E9AC3331AA45F5800B32980 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2E4C21F71AA1AE240041F4F8 /* ImageFunc.swift */,
-				08F527E4248E43050082F2E1 /* CustomizedView */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		2E9AC3341AA45F6400B32980 /* ViewProfile */ = {
-			isa = PBXGroup;
-			children = (
-				1085DBFF2485CADB00B7AF19 /* OtherProfileViewController.swift */,
-				08F527E2248E41F80082F2E1 /* ChatRequestConfirmViewController.swift */,
-				080B111C24993AFE00C75200 /* ChatRequestAcceptViewController.swift */,
-				08AD378D2497AD4C009CDA46 /* ProfileMoreDetailsViewController.swift */,
-				0843523E249AAF4100DC5AA1 /* ProfileImagesViewController.swift */,
-			);
-			name = ViewProfile;
-			sourceTree = "<group>";
-		};
 		2E9AC33B1AA4A6D400B32980 /* NSDate-Time-Ago */ = {
 			isa = PBXGroup;
 			children = (
@@ -1092,14 +1049,6 @@
 				2E9AC33D1AA4A6D400B32980 /* NSDate+NVTimeAgo.m */,
 			);
 			path = "NSDate-Time-Ago";
-			sourceTree = "<group>";
-		};
-		2E9AC33F1AA4DD8E00B32980 /* MatchSetting */ = {
-			isa = PBXGroup;
-			children = (
-				100604E1247F35FB0000312E /* SettingsViewController.swift */,
-			);
-			name = MatchSetting;
 			sourceTree = "<group>";
 		};
 		808652B82F9874AFEF7A4BE1 /* Pods */ = {
@@ -1128,6 +1077,7 @@
 				08F44FC12490EAC2002292FC /* MatchedPersonCell.xib */,
 			);
 			name = Cells;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		87EA5A592477671F0094DC6A /* MaskView */ = {
@@ -1330,7 +1280,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Finder/Pods-Finder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.framework",
@@ -1364,6 +1314,7 @@
 				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/abseil/absl.framework",
@@ -1375,7 +1326,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionViewWaterfallLayout.framework",
@@ -1409,6 +1360,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/absl.framework",
@@ -1441,7 +1393,6 @@
 				87EA5A582477650B0094DC6A /* RoundedCornerView.swift in Sources */,
 				1085DC002485CADB00B7AF19 /* OtherProfileViewController.swift in Sources */,
 				2E4C21F81AA1AE240041F4F8 /* ImageFunc.swift in Sources */,
-				2290CB4E2667724600A56145 /* AlertBuilder.swift in Sources */,
 				2E9608971AA3AD2B00F4CC50 /* JSQMessagesCollectionView.m in Sources */,
 				2E9608A01AA3AD2B00F4CC50 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				101D5027247E47FE0057D0A2 /* EditProfileViewController.swift in Sources */,
@@ -1453,6 +1404,7 @@
 				87BA2B182476F6830077981D /* OwnProfileImageCell.swift in Sources */,
 				1085DBF32481D92400B7AF19 /* UIImage+Extensions.swift in Sources */,
 				2E9608851AA3AD2B00F4CC50 /* JSQMessagesViewController.m in Sources */,
+				05EB3B1326AA6F3900CDDBE4 /* ImagePicker.swift in Sources */,
 				2E9608951AA3AD2B00F4CC50 /* JSQVideoMediaItem.m in Sources */,
 				2E3DD66B1AA063380077B6DA /* RegisterViewController.swift in Sources */,
 				2E4C221C1AA1AE710041F4F8 /* MDCGeometry.m in Sources */,
@@ -1465,6 +1417,7 @@
 				2E96089D1AA3AD2B00F4CC50 /* JSQMessagesComposerTextView.m in Sources */,
 				08F527E3248E41F80082F2E1 /* ChatRequestConfirmViewController.swift in Sources */,
 				2E9285B31AA612F300AF543E /* TermsViewController.swift in Sources */,
+				215673CD2668CE2E0004AED3 /* NewRequestViewController.swift in Sources */,
 				21C576A22664212200DF1189 /* AsyncPhotoMediaItem.swift in Sources */,
 				2E9608961AA3AD2B00F4CC50 /* JSQMessagesCellTextView.m in Sources */,
 				87EA5A5C2477671F0094DC6A /* MaskView.m in Sources */,
@@ -1619,7 +1572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "609b9b70-6354-46db-a696-919bedcfad39";
@@ -1657,7 +1610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "609b9b70-6354-46db-a696-919bedcfad39";
 				SDKROOT = iphoneos;
@@ -1674,7 +1627,7 @@
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = 2AV3B2BH2Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1682,7 +1635,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Finder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chawal.findrr;
@@ -1704,7 +1657,7 @@
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = 2AV3B2BH2Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1712,7 +1665,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Finder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chawal.findrr;

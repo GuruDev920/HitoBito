@@ -12,8 +12,7 @@ import Social
 import SideMenu
 
 import CollectionViewWaterfallLayout
-import BSImagePicker
-import Photos
+import DKImagePickerController
 
 protocol MainViewControllerDelegate {
     func didChatRequest(userIndex: Int)
@@ -36,7 +35,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var btnEdit: UIButton!
     @IBOutlet weak var btnFilter: UIButton!
-    @IBOutlet weak var notificationBtn: UIButton!
+    @IBOutlet weak var btnAlert: UIButton!
+    @IBOutlet weak var viewBadgeNewAlert: UIView!
     
     // for find matches
     @IBOutlet weak var findMatchesView: UIView!
@@ -412,33 +412,33 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func processChatRequests() {
         self.isGettingChatRequests = false
-        MatchManager.shared.getPendingRequestsToMe { (senders) in
-            
-            var user : NSDictionary?
-            guard let senders = senders else {
-                return
-            }
-            
-            for sender in senders {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatRequestAcceptViewController") as! ChatRequestAcceptViewController
-                if let tmp = user{
-                    if tmp != sender{
-                        vc.user = sender
-                        vc.delegate = self
-                        vc.modalPresentationStyle = .overFullScreen
-                        vc.modalTransitionStyle = .crossDissolve
-                        topViewController().present(vc, animated: true, completion: nil)
-                    }
-                }else{
-                    vc.user = sender
-                    vc.delegate = self
-                    vc.modalPresentationStyle = .overFullScreen
-                    vc.modalTransitionStyle = .crossDissolve
-                    topViewController().present(vc, animated: true, completion: nil)
-                }
-                user = sender
-            }
-        }
+//        MatchManager.shared.getPendingRequestsToMe { (senders) in
+//            
+//            var user : NSDictionary?
+//            guard let senders = senders else {
+//                return
+//            }
+//            
+//            for sender in senders {
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatRequestAcceptViewController") as! ChatRequestAcceptViewController
+//                if let tmp = user{
+//                    if tmp != sender{
+//                        vc.user = sender
+//                        vc.delegate = self
+//                        vc.modalPresentationStyle = .overFullScreen
+//                        vc.modalTransitionStyle = .crossDissolve
+//                        topViewController().present(vc, animated: true, completion: nil)
+//                    }
+//                }else{
+//                    vc.user = sender
+//                    vc.delegate = self
+//                    vc.modalPresentationStyle = .overFullScreen
+//                    vc.modalTransitionStyle = .crossDissolve
+//                    topViewController().present(vc, animated: true, completion: nil)
+//                }
+//                user = sender
+//            }
+//        }
     }
     
     func startLocation() {
@@ -508,30 +508,67 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if let results = results {
                 self.rooms = results
-                
+                self.users.removeAll()
+                var tempRooms = [NSDictionary]()
+
                 for room in self.rooms {
-                    
-                    var user1Id: String = ""
-                    var user2Id: String = ""
-                    let user1 = room.object(forKey: "byUser") as? NSDictionary
-                    if (user1 != nil) {
-                        user1Id = user1!.object(forKey: "userId") as! String
-                    } else {
-                        continue
-                    }
-                    let user2 = room.object(forKey: "toUser") as? NSDictionary
-                    if (user2 != nil) {
-                        user2Id = user2!.object(forKey: "userId") as! String
-                    } else {
-                       continue
-                    }
-                    
-                    if !(user1Id.elementsEqual(Auth.auth().currentUser!.uid)) {
-                        self.users.append(user1!)
-                    } else if !(user2Id.elementsEqual(Auth.auth().currentUser!.uid)) {
-                        self.users.append(user2!)
+                    let pendingStatus = room.object(forKey: "pending") as! Int
+                    if pendingStatus == 0 {
+                        var user1Id: String = ""
+                        var user2Id: String = ""
+                        let user1 = room.object(forKey: "byUser") as? NSDictionary
+                        if (user1 != nil) {
+                            user1Id = user1!.object(forKey: "userId") as! String
+                        } else {
+                            continue
+                        }
+                        let user2 = room.object(forKey: "toUser") as? NSDictionary
+                        if (user2 != nil) {
+                            user2Id = user2!.object(forKey: "userId") as! String
+                        } else {
+                           continue
+                        }
+                        
+                        let roomCount = tempRooms.count
+                        if !(user1Id.elementsEqual(Auth.auth().currentUser!.uid)) {
+                            if roomCount != 0 {
+                                let tempRoom = tempRooms[roomCount - 1]
+                                let curTime = room.object(forKey: "updatedAt") as? Int64
+                                let prevTime = tempRoom.object(forKey: "updatedAt") as? Int64
+                                
+                                if curTime! > prevTime! {
+                                    self.users.insert(user1!, at: roomCount - 1)
+                                    tempRooms.insert(room, at: roomCount - 1)
+                                } else {
+                                    self.users.append(user1!)
+                                    tempRooms.append(room)
+                                }
+                            } else {
+                                self.users.append(user1!)
+                                tempRooms.append(room)
+                            }
+                        } else if !(user2Id.elementsEqual(Auth.auth().currentUser!.uid)) {
+                            if roomCount != 0 {
+                                let tempRoom = tempRooms[roomCount - 1]
+                                let curTime = room.object(forKey: "updatedAt") as? Int64
+                                let prevTime = tempRoom.object(forKey: "updatedAt") as? Int64
+                                
+                                if curTime! > prevTime! {
+                                    self.users.insert(user2!, at: roomCount - 1)
+                                    tempRooms.insert(room, at: roomCount - 1)
+                                } else {
+                                    self.users.append(user2!)
+                                    tempRooms.append(room)
+                                }
+                            } else {
+                                self.users.append(user2!)
+                                tempRooms.append(room)
+                            }
+                        }
                     }
                 }
+                
+                self.rooms = tempRooms
             }
             self.matchesTableView.reloadData()
         }
@@ -723,6 +760,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let userFilterData = UserFilterData(user: currentuser)
+        // Email Verified
+//        let emailVerified: Bool = user.object(forKey: u_emailVerified) as? Bool ?? false
+//        if !emailVerified {
+//            return false
+//        }
         // Age
         let age: Int = user.object(forKey: u_age) as? Int ?? 28
         if age < userFilterData.filterAgeMin {
@@ -738,18 +780,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             return false
         }
         // Interest
-        let gender: Int = user.object(forKey: u_interested) as? Int ?? 0
+        let gender: Int = user.object(forKey: "gender") as? Int ?? 0
         if userFilterData.filterGender != 4, gender != userFilterData.filterGender {
             return false
         }
         // Location
-        if calcDistanceInKm(from: currentuser, to: user) > user.object(forKey: "locationLimit") as? Int ?? 500  || calcDistanceInKm(from: currentuser, to: user) < user.object(forKey: "locationLimitMin") as? Int ?? 0{
+        let distance = calcDistanceInKm(from: currentuser, to: user)
+        if distance > userFilterData.filterLocationMax  || distance < userFilterData.filterLocationMin{
             return false
         }
         
-        
         //Current Relationship
-        let curRelationship: Int = user.object(forKey: u_filterCurRelation) as? Int ?? -1
+        let curRelationship: Int64 = user.object(forKey: "curRelationship") as? Int64 ?? -1
         if userFilterData.filterCurRelation != 0 {
             if curRelationship == 1 {   // filter is single and relationship is married
                 return false
@@ -757,17 +799,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
 
         //Desired Relationship
-        let desiredRelationship: Int = user.object(forKey: u_filterDesiredRelation) as? Int ?? 3
-        if userFilterData.filterDesiredRelation != 3, desiredRelationship != userFilterData.filterDesiredRelation {
+        let desiredRelationship: Int = user.object(forKey: "desireRelationship") as? Int ?? 0
+        if userFilterData.filterDesiredRelation != 0, desiredRelationship != userFilterData.filterDesiredRelation {
             return false
         }
         //kids
-        let kids: Int = user.object(forKey: u_filterKids) as? Int ?? 2
-        if userFilterData.filterKids != 2, kids != userFilterData.filterKids {
+        let kids: Int = (user.object(forKey: "hasKids") as? Bool ?? false) == true ? 1 : 0
+        
+        if userFilterData.filterKids != 2, userFilterData.filterKids != kids{
             return false
         }
+        
         //Religion
-        let religion: Int = user.object(forKey: u_filterReligion) as? Int ?? -1
+        let religion: Int = user.object(forKey: "religion") as? Int ?? 0
         if userFilterData.filterReligion != -1, religion != userFilterData.filterReligion {
             return false
         }
@@ -800,10 +844,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.layoutSubviews()
     }
     
-    //MARK: -Handle Functions
-    @IBAction func notificationBtn(_ sender: Any) {
-        
-    }
     func showTabBarContent(_ tabItemType: TabItemType) {
         if tabItemType == self.tabItemType {
             return
@@ -816,28 +856,32 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.titleLabel.text = NSLocalizedString("PROFILE", comment: "")
             self.btnEdit.isHidden = false
             self.btnFilter.isHidden = true
+            self.btnAlert.isHidden = true
+            self.viewBadgeNewAlert.isHidden = true
             self.profileTableView.isHidden = false
             self.matchesTableView.isHidden = true
             self.findMatchesView.isHidden = true
-            self.notificationBtn.isHidden = true
         } else if (tabItemType == .matchlist) {
             self.titleLabel.text = NSLocalizedString("Match Result", comment: "")
             self.btnEdit.isHidden = true
             self.btnFilter.isHidden = true
+            self.btnAlert.isHidden = false
             self.matchesTableView.isHidden = false
             self.profileTableView.isHidden = true
             self.findMatchesView.isHidden = true
-            self.notificationBtn.isHidden = false
             
             loadMatchData()
+            checkNewChatRequests()
         } else {
             self.titleLabel.text = NSLocalizedString("DISCOVERY", comment: "")
             self.btnEdit.isHidden = true
             self.btnFilter.isHidden = false
+            self.btnAlert.isHidden = true
+            self.viewBadgeNewAlert.isHidden = true
             self.findMatchesView.isHidden = false
             self.matchesTableView.isHidden = true
             self.profileTableView.isHidden = true
-            self.notificationBtn.isHidden = true
+            
             self.adjustCollectionViewCellFrame()
             
             startFindMatches()
@@ -888,8 +932,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if tableView == self.profileTableView {
             return 3;
         } else if tableView == self.matchesTableView {
-            if rooms.count > 0 {
-                return rooms.count
+            if self.rooms.count > 0 {
+                return self.rooms.count
             }
             return 1
         }
@@ -931,7 +975,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let updatedAtTime = targetObject.object(forKey: "updatedAt") as? Int64
                 if (updatedAtTime != nil) {
                     let updatedAt = NSDate.init(timeIntervalSince1970: TimeInterval.init(updatedAtTime!))
-                    cell.timeAgo.text = String(format: "%@", updatedAt.formattedAsTimeAgo() ?? "Just");
+                    cell.timeAgo.text = String(format: "%@", updatedAt.formattedAsTimeAgo() ?? NSLocalizedString("Now", comment: ""));
                 }
                 
                 cell.backgroundColor = UIColor.clear
@@ -1012,8 +1056,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let targetObject = rooms[indexPath.row] as NSDictionary
                 
                 MBProgressHUD.showAdded(to: self.view, animated: true)
-                if targetObject.object(forKey: "pending") as! Bool == true{
-                    showAlert(title: "Info", message: "Please wait until user accepts your request", vc: self)
+                if targetObject.object(forKey: "pending") as! Bool == true {
+                    showAlert(title: "Info", message: NSLocalizedString("Please wait until user accepts your request", comment: ""), vc: self)
                     MBProgressHUD.hide(for: self.view, animated: true)
                     return
                 }
@@ -1028,6 +1072,49 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     self.navigationController?.pushViewController(messagesVC, animated: true)
                 }
+            }
+        }
+    }
+    
+    @IBAction func onNewRequests(_ sender: Any) {
+        MatchManager.shared.getPendingRequestsToMe { (senders) in
+            
+            var user : NSDictionary?
+            guard let senders = senders else {
+                return
+            }
+            
+            for sender in senders {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewRequestViewController") as! NewRequestViewController
+                if let tmp = user {
+                    if tmp != sender {
+                        vc.user = sender
+                        vc.delegate = self
+                        vc.modalPresentationStyle = .overFullScreen
+                        vc.modalTransitionStyle = .crossDissolve
+                        topViewController().present(vc, animated: true, completion: nil)
+                    }
+                } else {
+                    vc.user = sender
+                    vc.delegate = self
+                    vc.modalPresentationStyle = .overFullScreen
+                    vc.modalTransitionStyle = .crossDissolve
+                    topViewController().present(vc, animated: true, completion: nil)
+                }
+
+                user = sender
+            }
+        }
+    }
+    
+    private func checkNewChatRequests() {
+        MatchManager.shared.getPendingRequestsToMe { (senders) in
+            guard let senders = senders else {
+                return
+            }
+            
+            if !senders.isEmpty {
+                self.viewBadgeNewAlert.isHidden = false
             }
         }
     }
@@ -1062,13 +1149,12 @@ extension MainViewController: ProfileImagesCellDelegate {
     func photoButtonTapped(_ index: Int) {
         photobuttonclicked = index
 
-        let imagePicker = ImagePickerController()
-        imagePicker.settings.selection.max = MAX_NUMBER_OF_IMAGES - index
-        imagePicker.settings.theme.selectionStyle = .checked
-        imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
-        imagePicker.settings.selection.unselectOnReachingMax = true
-
-        self.presentImagePicker(imagePicker, animated: true, select: nil, deselect: nil, cancel: nil, finish: { (assets) in
+        let picker = DKImagePickerController()
+        picker.singleSelect = false
+        picker.sourceType = .both
+        picker.assetType = .allPhotos
+        
+        picker.didSelectAssets = {[unowned self] (assets: [DKAsset]) in
             let numberOfImages = assets.count
             if numberOfImages == 0 {
                 return
@@ -1077,11 +1163,12 @@ extension MainViewController: ProfileImagesCellDelegate {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             
             self.uploadMultiImage(forIndex: index, _count: 0, assets: assets)
-        }, completion: nil)
+        }
         
+        self.present(picker, animated: true, completion: nil)
     }
     
-    func uploadMultiImage(forIndex index: Int, _count: Int, assets: [PHAsset]) {
+    func uploadMultiImage(forIndex index: Int, _count: Int, assets: [DKAsset]) {
         
         let postUploadingImages = {
             MBProgressHUD.hide(for: self.view, animated: true)
@@ -1093,7 +1180,10 @@ extension MainViewController: ProfileImagesCellDelegate {
         
         var count = _count
         for asset in assets {
-            getAssetImage(asset: asset) { (image) in
+            asset.fetchOriginalImage { (image: UIImage?, _: [AnyHashable: Any]?) in
+//                let cropper = CropViewController(croppingStyle: .default, image: image!)
+//                cropper.delegate = self
+//                self.present(cropper, animated: true, completion: nil)
                 count += 1
                 if let image = image {
                     self.saveImage(imageNumber: index + count, pickedImg: image) {
@@ -1112,7 +1202,6 @@ extension MainViewController: ProfileImagesCellDelegate {
                 }
             }
         }
-        
     }
     
     private func saveImage(imageNumber: Int, pickedImg: UIImage, callback: (() -> ())?) {
@@ -1204,7 +1293,6 @@ extension MainViewController: MainViewControllerDelegate {
     }
 }
 
-//MARK: -UICollectionViewDelegate, UICollectionViewDataSource
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -1240,5 +1328,32 @@ extension MainViewController: ChatRequestAcceptViewControllerDelegate {
     func didAcceptChatRequest(userId: String) {
         self.loadMatchData()
         self.addObserverChat(matchedUserId: userId)
+        checkNewChatRequests()
     }
 }
+
+extension MainViewController: NewRequestViewControllerDelegate {
+    func didAcceptNewRequest(userId: String) {
+        self.loadMatchData()
+        self.addObserverChat(matchedUserId: userId)
+        checkNewChatRequests()
+    }
+    
+    func didDeclineNewRequest(userId: String) {
+        checkNewChatRequests()
+    }
+}
+
+
+/* gender: male - 1, female - 2, other - 3
+    curRelationship: single - 0 , married - 1, divorce - 2
+    haskids= true, false
+    desired relationship: whatever - 0, casual - 1, serious - 2, just friend - 3
+    religion: none - 0, christianity - 1, Islam - 2, Hinduism - 3, Budhism - 4, Judiasm - 5, other religion - 6
+ 
+ 
+ filtercurrentRelationship - any-0, single-1
+ filterkids = yes - 1, no - 0, any - 2
+ filterreligion = don't care  -1, doesnt believe : 0,christianity - 1, Islam - 2, Hinduism - 3, Budhism - 4, Judiasm - 5, other religion - 6
+ filterdesiredrelationship - whatever - 0, casual - 1, serious - 2, just friend - 3
+ */

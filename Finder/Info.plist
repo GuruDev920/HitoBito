@@ -23,7 +23,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb738940950188835</string>
+				<string>fb133304507004819</string>
 			</array>
 		</dict>
 		<dict>
@@ -38,7 +38,7 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
-	<string>738940950188835</string>
+	<string>133304507004819</string>
 	<key>FacebookDisplayName</key>
 	<string>Hito Bito</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -76,7 +76,6 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
-		<string>voip</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

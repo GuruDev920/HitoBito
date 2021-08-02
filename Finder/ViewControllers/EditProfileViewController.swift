@@ -9,7 +9,9 @@
 import UIKit
 import DLRadioButton
 import DropDown
-//import FirebaseDatabase
+import DKImagePickerController
+import CropViewController
+
 
 class EditProfileViewController: UIViewController {
 
@@ -235,11 +237,23 @@ class EditProfileViewController: UIViewController {
     private func clickPhoto(index: Int) {
         self.curPhotoIndex = index
         
-        let mediapicker = UIImagePickerController()
-        mediapicker.allowsEditing = true
-        mediapicker.delegate = self
-        mediapicker.sourceType = .photoLibrary
-        self.present(mediapicker, animated: true, completion: nil)
+        let picker = DKImagePickerController()
+        picker.singleSelect = true
+        picker.sourceType = .both
+        picker.assetType = .allPhotos
+        
+        picker.didSelectAssets = {[unowned self] (assets: [DKAsset]) in
+            
+            for asset in assets {
+                asset.fetchOriginalImage { (image: UIImage?, _: [AnyHashable: Any]?) in
+                    let cropper = CropViewController(croppingStyle: .default, image: image!)
+                    cropper.delegate = self
+                    self.present(cropper, animated: true, completion: nil)
+                }
+            }
+        }
+        
+        self.present(picker, animated: true, completion: nil)
     }
     
     @IBAction func saveTapped(_ sender: Any) {
@@ -278,7 +292,7 @@ class EditProfileViewController: UIViewController {
             currentuser?.setValue(location.address, forKey: u_locationText)
             // [u_locationText] = location.address
         }
-        currentuser?.setValue(self.userData.height, forKey: u_curRelation)
+        currentuser?.setValue(self.userData.height, forKey: u_height)
         // [u_height]          = self.userData.height
         currentuser?.setValue(self.userData.curRelation, forKey: u_curRelation)
         // [u_curRelation]     = self.userData.curRelation
@@ -336,20 +350,6 @@ class EditProfileViewController: UIViewController {
     }
 }
 
-
-extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        let pickedImg = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
-        self.userData.picsChanged[user_picKeys[self.curPhotoIndex]] = true
-        self.userData.picImages[user_picKeys[self.curPhotoIndex]] = pickedImg
-        self.imgvPhotos[self.curPhotoIndex].image = pickedImg
-        self.btnPhotos[self.curPhotoIndex].isHidden = true
-        
-        self.dismiss(animated: true, completion: nil)
-    }
-}
-
 extension EditProfileViewController: UITextViewDelegate {
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let textlength = (textView.text as NSString).length + (text as NSString).length - range.length
@@ -372,5 +372,15 @@ extension EditProfileViewController: UIScrollViewDelegate {
             gradientLayerForScroll.frame.size.height = height
             verticalIndicator.layer.addSublayer(gradientLayerForScroll)
         }
+    }
+}
+
+extension EditProfileViewController: CropViewControllerDelegate {
+    public func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        cropViewController.dismiss(animated: true, completion: nil)
+        self.userData.picsChanged[user_picKeys[self.curPhotoIndex]] = true
+        self.userData.picImages[user_picKeys[self.curPhotoIndex]] = image
+        self.imgvPhotos[self.curPhotoIndex].image = image
+        self.btnPhotos[self.curPhotoIndex].isHidden = true
     }
 }

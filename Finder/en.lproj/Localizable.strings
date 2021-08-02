@@ -19,6 +19,12 @@
 "Or signup via" = "Or signup via";
 "Have an account? Login" = "Have an account? Login";
 "Login" = "Login";
+"Take a photo" = "Take a photo";
+"Photo Library" = "Photo Library";
+"Cancel" = "Cancel";
+"TermsAgree1" = "I agree terms of use and";
+"TermsAgree2" = "privacy poicy.";
+"Do you agree to the Terms of Use and Privacy Policy?" = "Do you agree to the Terms of Use and Privacy Policy?";
 
 //Match Result Screen
 "Match Result" = "Match Result";
@@ -75,7 +81,6 @@
 "Age Limit" = "Age Limit";
 "Both" = "Both";
 "Location Limit" = "Location Limit";
-"Current Relationship" = "Current Relationship";
 "Kids" = "Kids";
 "Someone looking for" = "Someone looking for";
 "Religion" = "Religion";
@@ -134,3 +139,27 @@
 
 "I don't care" = "I don't care";
 "Any" = "Any";
+"New Request!" = "New Request!";
+"Now" = "Now";
+"Please wait until user accepts your request" = "Please wait until user accepts your request";
+" min ago" = " min ago";
+" minute ago" = " minute ago";
+" hrs ago" = " hrs ago";
+" hr ago" = " hr ago";
+
+"Reset Password" = "Reset Password";
+"Please enter the email your account was setup with" = "Please enter the email your account was setup with";
+"Request" = "Request";
+"Password reset email sent" = "Password reset email sent";
+"An email was sent to your email address, Please check your email to reset your password." = "An email was sent to your email address, Please check your email to reset your password.";
+"The operations is not allowed." = "The operations is not allowed.";
+"You have been disabled by Administrator." = "You have been disabled by Administrator.";
+"Sign in error" = "Sign in error";
+"Your password is incorrect. Please try with correct password." = "Your password is incorrect. Please try with correct password.";
+"Your email address is malformed." = "Your email address is malformed.";
+"You didn't verify your email yet. Please check your email." = "You didn't verify your email yet. Please check your email.";
+"Your email address is already in use." = "Your email address is already in use.";
+"Your password is weak. Please try with strong password." = "Your password is weak. Please try with strong password.";
+"You are failed to create user on Database." = "You are failed to create user on Database.";
+"Request sent" = "Request sent";
+"Please upload your photos." = "Please upload your photos.";

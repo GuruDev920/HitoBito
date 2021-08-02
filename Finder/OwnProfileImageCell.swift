@@ -34,15 +34,6 @@ class OwnProfileImageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func initCell(imageFile:String?){
-        
-        if let pic = imageFile {
-            self.imgView.sd_setImage(with: URL(string: pic), completed: nil)
-        } else {
-            self.imgView.image = UIImage(named: "ic_female")
-        }
-    }
-    
     func initCell(user: NSDictionary?, parentVC: UIViewController? = nil) {
         self.parentVC = parentVC
         
@@ -59,7 +50,7 @@ class OwnProfileImageCell: UITableViewCell {
         self.user = user
         let userData = UserData(user: user)
         
-        if let pic = userData.dpLarge {
+        if let pic = userData.pics[u_pic1] {
             self.imgView.sd_setImage(with: URL(string: pic), completed: nil)
         } else {
             if userData.gender == 1 {

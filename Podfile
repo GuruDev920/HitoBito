@@ -13,7 +13,6 @@ target 'Finder' do
   pod 'RangeSeekSlider'
   pod 'CollectionViewWaterfallLayout'
   pod 'DropDown'
-  pod 'BSImagePicker'
   pod 'ImageSlideshow'
   pod 'SDWebImage'
   pod 'JSQSystemSoundPlayer'
@@ -32,4 +31,6 @@ target 'Finder' do
 
   pod 'Alamofire'
   pod 'DKImagePickerController'
+  pod 'SwiftKeychainWrapper'
+  pod 'BEMCheckBox'
 end

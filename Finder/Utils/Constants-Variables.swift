@@ -80,6 +80,9 @@ let MAX_AGE         = 80
 let MIN_LOCATION    = 0
 let MAX_LOCATION    = 1000
 
+let APPLE_ID_EMAIL = "apple_email"
+let APPLE_ID_NAME = "apple_name"
+
 // Height in centimeters
 let MIN_HEIGHT      = 150
 let MAX_HEIGHT      = 190
@@ -166,17 +169,6 @@ func calcDistanceInKm(from: NSDictionary?, to: NSDictionary?) -> Int {
     let endLoc = CLLocation.init(latitude: endPoint[0], longitude: endPoint[1])
     
     return Int(startLoc.distance(from: endLoc) / 1000)
-}
-
-func getAssetImage(asset: PHAsset, callback: ((UIImage?) -> ())?) {
-    let options = PHImageRequestOptions()
-    options.resizeMode = .exact
-    options.deliveryMode = .highQualityFormat
-    options.isSynchronous = true
-    let manager = PHImageManager.default()
-    manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .default, options: options, resultHandler: {(result, info)->Void in
-        callback?(result)
-    })
 }
 
 func topViewController() -> UIViewController {

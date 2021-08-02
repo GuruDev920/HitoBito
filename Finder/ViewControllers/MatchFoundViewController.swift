@@ -67,7 +67,7 @@ class MatchFoundViewController: UIViewController {
                 self.dismiss(animated: false, completion: nil)
                 self.delegate?.chatNow(room: obj, user: self.getUser)
             }else{
-                let alertController = UIAlertController(title: "Request sent", message: "Please wait until user accepts your request", preferredStyle: .alert)
+                let alertController = UIAlertController(title: NSLocalizedString("Request sent", comment: ""), message: NSLocalizedString("Please wait until user accepts your request", comment: ""), preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action:UIAlertAction!) in
                     self.dismiss(animated: false, completion: nil)
                 }))

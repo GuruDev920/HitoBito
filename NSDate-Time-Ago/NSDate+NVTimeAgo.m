@@ -55,7 +55,7 @@
     
     // < 1 minute = "Just now"
     if(secondsSince < MINUTE)
-        return @"Now";
+        return NSLocalizedString(@"Now", @"");
     
     
     // < 1 hour = "x minutes ago"
@@ -191,9 +191,12 @@
     
     //Handle Plural
     if(minutesSince == 1)
-        return @"1 minute ago";
-    else
-        return [NSString stringWithFormat:@"%d min ago", minutesSince];
+        return [@"1" stringByAppendingString:NSLocalizedString(@" minute ago", @"")];
+    else {
+        NSString *s = [NSString stringWithFormat:@"%d", minutesSince];
+        s = [s stringByAppendingString:NSLocalizedString(@" min ago", @"")];
+        return s;
+    }
 }
 
 
@@ -205,9 +208,12 @@
     
     //Handle Plural
     if(hoursSince == 1)
-        return @"1 hr ago";
-    else
-        return [NSString stringWithFormat:@"%d hrs ago", hoursSince];
+        return [@"1" stringByAppendingString:NSLocalizedString(@" hr ago", @"")];
+    else {
+        NSString *s = [NSString stringWithFormat:@"%d", hoursSince];
+        s = [s stringByAppendingString:NSLocalizedString(@" hrs ago", @"")];
+        return s;
+    }
 }
 
 

@@ -57,7 +57,7 @@ class ChatRequestAcceptViewController: UIViewController {
                 }
             }
             
-            self.lblChatWithYou.text = userData.fname + " wants to chat with you."
+            self.lblChatWithYou.text = userData.fname + NSLocalizedString(" wants to chat with you.", comment: "")
             
             self.lblUserName.text = String(format: "%@, %d", userData.name, userData.age)
             self.lblJob.text = userData.job
